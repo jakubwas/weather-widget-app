@@ -1,5 +1,5 @@
 export interface WeatherData {
-  temperature?: string;
+  temperature?: number;
   temperatureFeelsLike?: string;
   temperatureMax?: string;
   temperatureMin?: string;

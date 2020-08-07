@@ -1,1 +1,72 @@
-/* No CSS *//*# sourceMappingURL=box-left.component.css.map */
+.left-widget {
+  width: 300px;
+  height: 450px;
+  border-radius: 15px;
+  -webkit-box-shadow: 2px 2px 0 0px rgba(0, 0, 0, 0.22);
+          box-shadow: 2px 2px 0 0px rgba(0, 0, 0, 0.22);
+  background-image: url("../../../assets/widget-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.left-widget:hover {
+  -webkit-transform: scale(1.05) perspective(1100px) rotateY(5deg);
+          transform: scale(1.05) perspective(1100px) rotateY(5deg);
+}
+
+.left-widget .left-widget--dateAndLocation {
+  padding: 1rem;
+}
+
+.left-widget .left-widget--dateAndLocation .location-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0.8rem;
+}
+
+.left-widget .left-widget--dateAndLocation .location-container svg {
+  width: 1rem;
+  height: 1rem;
+  stroke: white;
+  stroke-width: 0.1rem;
+  fill: rgba(0, 0, 0, 0);
+  margin-right: 0.3rem;
+}
+
+.left-widget .left-widget--temperature {
+  padding: 1rem;
+}
+
+.left-widget .left-widget--temperature img {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  left: 0%;
+}
+
+.left-widget .left-widget--temperature h1 {
+  font-size: 4rem;
+  padding-top: 5rem;
+}
+
+.left-widget .left-widget--temperature h2 {
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=box-left.component.css.map */

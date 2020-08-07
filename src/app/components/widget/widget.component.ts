@@ -22,14 +22,21 @@ export class WidgetComponent implements OnInit {
 
   editData() {
     this.weatherData = {
-      temperature: this.openWeatherAPIResponse.main.temp,
+      temperature: Math.floor(-273.15 + +this.openWeatherAPIResponse.main.temp),
       temperatureFeelsLike: this.openWeatherAPIResponse.main.feels_like,
       temperatureMin: this.openWeatherAPIResponse.main.temp_min,
       temperatureMax: this.openWeatherAPIResponse.main.temp_min,
       pressure: this.openWeatherAPIResponse.main.pressure,
       humidity: this.openWeatherAPIResponse.main.humidity,
       clouds: this.openWeatherAPIResponse.clouds.all,
-      description: this.openWeatherAPIResponse.weather[0].description,
+      description: (() => {
+        return (
+          this.openWeatherAPIResponse.weather[0].description
+            .charAt(0)
+            .toUpperCase() +
+          this.openWeatherAPIResponse.weather[0].description.slice(1)
+        );
+      })(),
       iconUrl: `http://openweathermap.org/img/wn/${this.openWeatherAPIResponse.weather[0].icon}@2x.png`,
     };
   }

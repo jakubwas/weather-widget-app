@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,aAAa,CAAC;EACZ,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,OAAe;EAC3B,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,CAAC;EACV,uBAAuB,EAAE,IAAI;EAC7B,0BAA0B,EAAE,IAAI;CACjC",
     "sources": [
         "box-right.component.scss"
     ],
