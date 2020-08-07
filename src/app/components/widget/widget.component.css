@@ -1,0 +1,56 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: #e5e5ee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.widget-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.left-widget {
+  width: 300px;
+  height: 450px;
+  border-radius: 15px;
+  -webkit-box-shadow: 2px 2px 0 0px rgba(0, 0, 0, 0.22);
+          box-shadow: 2px 2px 0 0px rgba(0, 0, 0, 0.22);
+  background-image: url("../../../assets/widget-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+  position: relative;
+  z-index: 2;
+}
+
+.left-widget:hover {
+  -webkit-transform: scale(1.1) perspective(1500px) rotateY(10deg);
+          transform: scale(1.1) perspective(1500px) rotateY(10deg);
+}
+
+.right-widget {
+  width: 300px;
+  height: 430px;
+  background: #222831;
+  position: relative;
+  z-index: 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+/*# sourceMappingURL=widget.component.css.map */

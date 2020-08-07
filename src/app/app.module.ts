@@ -6,9 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WidgetComponent } from './components/widget/widget.component';
 import { DataService } from './services/data.service';
+import { BoxLeftComponent } from './components/box-left/box-left.component';
+import { BoxRightComponent } from './components/box-right/box-right.component';
 
 @NgModule({
-  declarations: [AppComponent, WidgetComponent],
+  declarations: [
+    AppComponent,
+    WidgetComponent,
+    BoxLeftComponent,
+    BoxRightComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [DataService],
   bootstrap: [AppComponent],
