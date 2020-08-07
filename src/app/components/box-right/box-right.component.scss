@@ -6,4 +6,45 @@
   z-index: 0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  display: flex;
+  flex-direction: column;
+
+  .right-widget--extendedInfo {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      font-size: 1.1rem;
+      color: white;
+    }
+  }
+
+  .right-widget--dataCalculationInfo {
+    font-size: 0.5rem;
+    color: white;
+    margin: 4rem auto 1rem auto;
+    text-align: center;
+  }
+
+  button {
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    outline: none;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: transform 1.1s;
+    &:hover {
+      transform: rotate(720deg);
+    }
+    svg {
+      width: 1.5rem;
+      fill: white;
+    }
+  }
 }

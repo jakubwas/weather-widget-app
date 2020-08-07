@@ -22,10 +22,14 @@ export class WidgetComponent implements OnInit {
 
   editData() {
     this.weatherData = {
-      temperature: Math.floor(-273.15 + +this.openWeatherAPIResponse.main.temp),
-      temperatureFeelsLike: this.openWeatherAPIResponse.main.feels_like,
-      temperatureMin: this.openWeatherAPIResponse.main.temp_min,
-      temperatureMax: this.openWeatherAPIResponse.main.temp_min,
+      temperature: (() =>
+        this.convertTemperature(this.openWeatherAPIResponse.main.temp))(),
+      temperatureFeelsLike: (() =>
+        this.convertTemperature(this.openWeatherAPIResponse.main.feels_like))(),
+      temperatureMin: (() =>
+        this.convertTemperature(this.openWeatherAPIResponse.main.temp_min))(),
+      temperatureMax: (() =>
+        this.convertTemperature(this.openWeatherAPIResponse.main.temp_max))(),
       pressure: this.openWeatherAPIResponse.main.pressure,
       humidity: this.openWeatherAPIResponse.main.humidity,
       clouds: this.openWeatherAPIResponse.clouds.all,
@@ -38,6 +42,18 @@ export class WidgetComponent implements OnInit {
         );
       })(),
       iconUrl: `http://openweathermap.org/img/wn/${this.openWeatherAPIResponse.weather[0].icon}@2x.png`,
+      unixUtc: (() =>
+        this.convertDateFromUtc(this.openWeatherAPIResponse.dt))(),
     };
+  }
+
+  convertTemperature(temperature: number): string {
+    return `${Math.floor(-273.15 + temperature)} ${String.fromCharCode(176)}C`;
+  }
+
+  convertDateFromUtc(unixTimestamp: number) {
+    const milliseconds = unixTimestamp * 1000;
+    const dateObject = new Date(milliseconds);
+    return dateObject.toLocaleString();
   }
 }

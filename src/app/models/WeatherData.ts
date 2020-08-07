@@ -1,5 +1,5 @@
 export interface WeatherData {
-  temperature?: number;
+  temperature?: string;
   temperatureFeelsLike?: string;
   temperatureMax?: string;
   temperatureMin?: string;
@@ -8,4 +8,5 @@ export interface WeatherData {
   humidity?: string;
   clouds?: string;
   description?: string;
+  unixUtc?: string;
 }
