@@ -1,4 +1,11 @@
-<div class="left-widget">
+<div
+  class="left-widget"
+  [ngClass]="{
+    'left-widget__morning-bg': morning,
+    'left-widget__afternoon-bg': afternoon,
+    'left-widget__evening-bg': evening
+  }"
+>
   <div class="left-widget--dateAndLocation">
     <h1>{{ weekDay }}</h1>
     <h2>{{ date }}</h2>
