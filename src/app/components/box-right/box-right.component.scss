@@ -1,31 +1,62 @@
 .right-widget {
-  width: 300px;
-  height: 430px;
+  width: 31rem;
+  height: 45rem;
   background: rgb(34, 40, 49);
   position: relative;
   z-index: 0;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
   display: flex;
   flex-direction: column;
 
   .right-widget--extendedInfo {
     width: 80%;
     margin: 0 auto;
-    padding-top: 1rem;
+    padding-top: 2.1rem;
     display: flex;
     justify-content: space-between;
+
+    &:first-child {
+      margin-top: 2rem;
+    }
+
+    h1,
+    h2 {
+      color: rgb(255, 255, 255);
+    }
+
     h1 {
-      font-size: 1.1rem;
-      color: white;
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-left: 0.5rem;
+    }
+
+    h2 {
+      font-weight: 400;
+    }
+
+    .heading-container {
+      display: flex;
+      align-items: flex-end;
     }
   }
 
   .right-widget--dataCalculationInfo {
     font-size: 0.5rem;
     color: white;
-    margin: 4rem auto 1rem auto;
+    margin: 7rem auto 1rem auto;
     text-align: center;
+
+    h1 {
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
   }
 
   button {
