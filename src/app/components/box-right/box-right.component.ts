@@ -8,12 +8,19 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class BoxRightComponent implements OnInit {
   @Input() weather: any;
   @Output() updateDataEmiter = new EventEmitter<boolean>();
-  didVote = false;
+
+  refreshedNote: boolean;
 
   constructor() {}
 
   ngOnInit(): void {}
+
   updateData() {
     this.updateDataEmiter.emit();
+
+    this.refreshedNote = true;
+    setTimeout(() => {
+      this.refreshedNote = false;
+    }, 2500);
   }
 }

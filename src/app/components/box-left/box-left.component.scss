@@ -11,7 +11,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transform: scale(1.05) perspective(110rem) rotateY(5deg);
+  transform: scale(1.05) perspective(110rem);
+  @media screen and (min-width: 850px) {
+    transform: scale(1.05) perspective(110rem) rotateY(5deg);
+  }
 
   .left-widget--dateAndLocation {
     padding: 1.9rem;

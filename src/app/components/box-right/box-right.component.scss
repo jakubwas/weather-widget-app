@@ -9,6 +9,11 @@
   display: flex;
   flex-direction: column;
 
+  @media screen and (max-width: 850px) {
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+  }
+
   .right-widget--extendedInfo {
     width: 80%;
     margin: 0 auto;
@@ -69,13 +74,22 @@
     outline: none;
     margin: 0 auto;
     cursor: pointer;
-    transition: transform 1.1s;
-    &:hover {
-      transform: rotate(720deg);
-    }
+
     svg {
       width: 1.5rem;
       fill: white;
     }
+  }
+
+  .refreshedNote {
+    margin: 2rem auto;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+  }
+
+  .refreshedBtnRotation {
+    transition: transform 2.5s;
+    transform: rotate(1080deg);
   }
 }

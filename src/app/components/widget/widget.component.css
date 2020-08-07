@@ -1,6 +1,6 @@
 .container {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background: #e5e5ee;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,11 +14,24 @@
 }
 
 .widget-container {
+  margin: 3rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 850px) {
+  .widget-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=widget.component.css.map */

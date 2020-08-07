@@ -22,8 +22,15 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transform: scale(1.05) perspective(110rem) rotateY(5deg);
-          transform: scale(1.05) perspective(110rem) rotateY(5deg);
+  -webkit-transform: scale(1.05) perspective(110rem);
+          transform: scale(1.05) perspective(110rem);
+}
+
+@media screen and (min-width: 850px) {
+  .left-widget {
+    -webkit-transform: scale(1.05) perspective(110rem) rotateY(5deg);
+            transform: scale(1.05) perspective(110rem) rotateY(5deg);
+  }
 }
 
 .left-widget .left-widget--dateAndLocation {
