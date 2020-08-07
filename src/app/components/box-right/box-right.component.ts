@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-box-right',
@@ -7,8 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BoxRightComponent implements OnInit {
   @Input() weather: any;
+  @Output() updateDataEmiter = new EventEmitter<boolean>();
+  didVote = false;
 
   constructor() {}
 
   ngOnInit(): void {}
+  updateData() {
+    this.updateDataEmiter.emit();
+  }
 }

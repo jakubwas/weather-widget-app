@@ -1,6 +1,9 @@
 <div class="container">
   <div class="widget-container">
     <app-box-left [weather]="weatherData"></app-box-left>
-    <app-box-right [weather]="weatherData"></app-box-right>
+    <app-box-right
+      (updateDataEmiter)="onUpdateData()"
+      [weather]="weatherData"
+    ></app-box-right>
   </div>
 </div>

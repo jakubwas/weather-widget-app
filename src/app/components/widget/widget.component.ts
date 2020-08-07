@@ -13,6 +13,18 @@ export class WidgetComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
+    this.fetchWeatherData();
+    setInterval(() => {
+      this.fetchWeatherData();
+    }, 500000);
+  }
+
+  onUpdateData() {
+    this.fetchWeatherData();
+    console.log('Hello');
+  }
+
+  fetchWeatherData() {
     this.dataService.getWeather().subscribe((data) => {
       console.log(data);
       this.openWeatherAPIResponse = data;
