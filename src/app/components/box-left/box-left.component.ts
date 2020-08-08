@@ -19,18 +19,23 @@ export class BoxLeftComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+    this.updateDate();
     setInterval(() => {
-      this.today = new Date();
-      this.timeOfTheDay = this.today.getHours();
-      this.weekDay = this.today.toLocaleString('default', { weekday: 'long' });
-
-      const mm = this.today.toLocaleString('default', { month: 'short' });
-      const dd = this.today.toLocaleString('default', { day: 'numeric' });
-      const yyyy = this.today.toLocaleString('default', { year: 'numeric' });
-      this.date = `${dd} ${mm} ${yyyy}`;
-
-      this.checkDayTime();
+      this.updateDate();
     }, 100000);
+  }
+
+  updateDate() {
+    this.today = new Date();
+    this.timeOfTheDay = this.today.getHours();
+    this.weekDay = this.today.toLocaleString('default', { weekday: 'long' });
+
+    const mm = this.today.toLocaleString('default', { month: 'short' });
+    const dd = this.today.toLocaleString('default', { day: 'numeric' });
+    const yyyy = this.today.toLocaleString('default', { year: 'numeric' });
+    this.date = `${dd} ${mm} ${yyyy}`;
+
+    this.checkDayTime();
   }
 
   checkDayTime() {

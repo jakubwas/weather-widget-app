@@ -62,6 +62,11 @@
           align-items: flex-end;
 }
 
+.right-widget .right-widget--extendedInfo .heading-container svg {
+  fill: white;
+  width: 2rem;
+}
+
 .right-widget .right-widget--dataCalculationInfo {
   font-size: 0.5rem;
   color: white;
