@@ -21,7 +21,6 @@ export class WidgetComponent implements OnInit {
 
   onUpdateData() {
     this.fetchWeatherData();
-    console.log('Hello');
   }
 
   fetchWeatherData() {

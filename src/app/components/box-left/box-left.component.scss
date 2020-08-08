@@ -12,6 +12,7 @@
   flex-direction: column;
   justify-content: space-between;
   transform: scale(1.05) perspective(110rem);
+
   @media screen and (min-width: 850px) {
     transform: scale(1.05) perspective(110rem) rotateY(5deg);
   }
@@ -81,7 +82,7 @@
   background-image: url("../../../assets/widget-bg1.png");
 }
 .left-widget__afternoon-bg {
-  background-image: url("../../../assets/widget-bg.jpg");
+  background-image: url("../../../assets/widget-bg2.jpg");
 }
 .left-widget__evening-bg {
   background-image: url("../../../assets/widget-bg3.png");

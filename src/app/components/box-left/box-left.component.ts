@@ -19,16 +19,18 @@ export class BoxLeftComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.today = new Date();
-    this.timeOfTheDay = this.today.getHours();
-    this.weekDay = this.today.toLocaleString('default', { weekday: 'long' });
+    setInterval(() => {
+      this.today = new Date();
+      this.timeOfTheDay = this.today.getHours();
+      this.weekDay = this.today.toLocaleString('default', { weekday: 'long' });
 
-    const mm = this.today.toLocaleString('default', { month: 'short' });
-    const dd = this.today.toLocaleString('default', { day: 'numeric' });
-    const yyyy = this.today.toLocaleString('default', { year: 'numeric' });
-    this.date = `${dd} ${mm} ${yyyy}`;
+      const mm = this.today.toLocaleString('default', { month: 'short' });
+      const dd = this.today.toLocaleString('default', { day: 'numeric' });
+      const yyyy = this.today.toLocaleString('default', { year: 'numeric' });
+      this.date = `${dd} ${mm} ${yyyy}`;
 
-    this.checkDayTime();
+      this.checkDayTime();
+    }, 100000);
   }
 
   checkDayTime() {
@@ -36,7 +38,7 @@ export class BoxLeftComponent implements OnInit {
       this.afternoon = false;
       this.evening = true;
       console.log(this.timeOfTheDay);
-    } else if (this.timeOfTheDay >= 4 && this.timeOfTheDay < 12) {
+    } else if (this.timeOfTheDay >= 4 && this.timeOfTheDay < 10) {
       this.evening = false;
       this.morning = true;
       console.log(this.timeOfTheDay);
