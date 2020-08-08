@@ -25,7 +25,6 @@ export class WidgetComponent implements OnInit {
 
   fetchWeatherData() {
     this.dataService.getWeather().subscribe((data) => {
-      console.log(data);
       this.openWeatherAPIResponse = data;
       this.editData();
     });
