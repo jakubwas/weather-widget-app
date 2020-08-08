@@ -17,7 +17,7 @@ The app refreshes itself every 5 minutes and also enable the user to refresh by 
 
 ## Website link
 
-### [WeatherWidget]()
+### [WeatherWidget](https://weatherwidgetangular.netlify.app/)
 
 ## Usage
 
